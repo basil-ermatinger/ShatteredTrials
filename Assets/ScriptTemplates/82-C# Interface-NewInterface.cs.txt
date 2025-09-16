@@ -1,0 +1,8 @@
+#ROOTNAMESPACEBEGIN#
+namespace Rpg2dSidescroller
+{
+  public interface #SCRIPTNAME#
+  {
+  }
+}
+#ROOTNAMESPACEEND#
