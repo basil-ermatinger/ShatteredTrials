@@ -9,6 +9,8 @@ namespace Rpg2dSidescroller
 		private PlayerInputSet _input;
 		private Vector2 _moveInput;
 
+		private float _moveSpeed = 5f;
+
 		private void Awake()
 		{
 			_rb = GetComponent<Rigidbody>();
@@ -28,7 +30,7 @@ namespace Rpg2dSidescroller
 			_input.Player.Movement.canceled += ctx => _moveInput = Vector2.zero;
 		}
 
-		private void Update()
+		private void FixedUpdate()
 		{
 			SetVelocity(_moveInput.x, _moveInput.y);
 		}
@@ -38,9 +40,13 @@ namespace Rpg2dSidescroller
 			_input.Disable();
 		}
 
-		private void SetVelocity(float xVelocity, float yVelocity)
+		private void SetVelocity(float xVelocity, float zVelocity)
 		{
-			_rb.linearVelocity = new Vector2(xVelocity, yVelocity);
+			Vector3 move = new Vector3(xVelocity, 0f, zVelocity) * _moveSpeed;
+
+			Debug.Log("Move: " + move);
+
+			_rb.linearVelocity = new Vector3(move.x, _rb.linearVelocity.y, move.z);
 		}
 	}
 }

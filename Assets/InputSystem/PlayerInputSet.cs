@@ -105,7 +105,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""39678073-f92f-45d5-8ee5-3d60151eb948"",
+                    ""id"": ""73686442-ac38-4c73-9fd9-0b2cbaf63a4b"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -116,7 +116,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""d52820c3-7d10-4488-8be7-e5ac862b7fef"",
+                    ""id"": ""f931e5fe-9f44-45d6-add0-7c979b677069"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -127,7 +127,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""bf984aef-d540-4c1e-895b-f2f37856532f"",
+                    ""id"": ""d4651e1f-32bf-492a-b69e-554c5ac77f78"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -138,22 +138,22 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""2a62049b-76ac-4f40-b5fc-3048bc0df311"",
+                    ""id"": ""8a28fdf5-ab89-4ca5-8b0a-4e89abdd750d"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""911f850b-d3cb-41b8-8ea1-68535e2331df"",
+                    ""id"": ""ac8e4339-9299-4bcc-861f-f7d7846c88bd"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
