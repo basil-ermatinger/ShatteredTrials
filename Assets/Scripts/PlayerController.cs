@@ -1,13 +1,17 @@
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Rpg2dSidescroller
 {
-	public class Player : MonoBehaviour
+	public class PlayerController : MonoBehaviour
 	{
 		private Rigidbody _rb;
 		private PlayerInputSet _input;
 		private Vector2 _moveInput;
+
+		public StateMachine PlayerStateMachine { get; private set; }
 
 		private float _moveSpeed = 5f;
 
@@ -16,6 +20,7 @@ namespace Rpg2dSidescroller
 			_rb = GetComponent<Rigidbody>();
 
 			_input = new PlayerInputSet();
+			InitializeStateMachine();
 		}
 
 		private void Start()
@@ -47,6 +52,19 @@ namespace Rpg2dSidescroller
 			Debug.Log("Move: " + move);
 
 			_rb.linearVelocity = new Vector3(move.x, _rb.linearVelocity.y, move.z);
+		}
+
+		private void InitializeStateMachine()
+		{
+			IState playerIdleState = new PlayerIdleState(this);
+
+			List<IState> playerStates = new List<IState>()
+			{
+				playerIdleState
+			};
+
+			PlayerStateMachine = new StateMachine(playerStates);
+			PlayerStateMachine.Initialize(playerIdleState);
 		}
 	}
 }
