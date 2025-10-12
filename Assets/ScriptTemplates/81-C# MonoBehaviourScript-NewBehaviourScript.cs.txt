@@ -1,0 +1,19 @@
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+namespace Rpg2dSidescroller
+{
+	public class #SCRIPTNAME# : MonoBehaviour
+	{
+		void Start()
+		{
+		#NOTRIM#
+		}
+
+		void Update()
+		{
+		#NOTRIM#
+		}
+	}
+}
+#ROOTNAMESPACEEND#
